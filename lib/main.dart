@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hacker_news/topArticleList.dart';
+import 'package:hacker_news/Articles.dart';
 
 void main() => runApp(MyApp());
 

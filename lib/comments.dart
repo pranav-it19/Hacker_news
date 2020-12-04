@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:hacker_news/story.dart';
+import 'package:hacker_news/stories.dart';
 
 class CommentListPage extends StatelessWidget {
 
@@ -15,10 +15,10 @@ class CommentListPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(this.story.title), 
-        backgroundColor: Colors.orange
-
-      ),
+        title: Text(this.story.title,textAlign: TextAlign.center,), 
+        ),
+        backgroundColor: Colors.purple[300]
+      ,
       body: ListView.builder(
         itemCount: this.comments.length,
         itemBuilder: (context,index) {

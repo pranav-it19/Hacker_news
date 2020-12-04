@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:hacker_news/story.dart';
-import 'package:hacker_news/urlHelper.dart';
+import 'package:hacker_news/stories.dart';
+import 'package:hacker_news/url.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 

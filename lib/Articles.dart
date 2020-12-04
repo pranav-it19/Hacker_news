@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:hacker_news/story.dart';
-import 'package:hacker_news/webservice.dart';
+import 'package:hacker_news/stories.dart';
+import 'package:hacker_news/web.dart';
 
-import 'commentListPage.dart';
+import 'comments.dart';
 
 class TopArticleList extends StatefulWidget {
   @override 
@@ -58,10 +58,17 @@ class _TopArticleListState extends State<TopArticleList> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      
       appBar: AppBar(
-        title: Text("Hacker News"), 
-        backgroundColor: Colors.orange,
+     
+        title: Row(
+          mainAxisAlignment:MainAxisAlignment.center,
+          children:<Widget>[Text("HACKER NEWS" ,style: TextStyle(color:Colors.red,fontSize: 20), 
+        ),]
+        ),
+        backgroundColor: Colors.green,
       ),
+      backgroundColor: Colors.blue[300],
       body: ListView.builder(
         itemCount: _stories.length, 
         itemBuilder: (_, index) {
