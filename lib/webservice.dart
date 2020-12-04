@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:hacker_news/stories.dart';
-import 'package:hacker_news/url.dart';
+import 'package:hacker_news/story.dart';
+import 'package:hacker_news/urlHelper.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 
@@ -24,7 +24,7 @@ class Webservice {
     final response = await http.get(UrlHelper.urlForTopStories());
     if (response.statusCode == 200) {
       Iterable storyIds = jsonDecode(response.body);
-      return Future.wait(storyIds.take(10).map((storyId) {
+      return Future.wait(storyIds.take(14).map((storyId) {
         return _getStory(storyId);
       }));
 
